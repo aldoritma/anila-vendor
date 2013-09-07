@@ -326,8 +326,8 @@ $tablet-end:    $desktop-start - 1px;
     @include grid-row;
 
     &.collapse {
-      .column,
-      .columns { @include grid-column($collapse:true); }
+      > .column,
+      > .columns { @include grid-column($collapse:true); }
     }
 
     .row { @include grid-row($behavior:nest);
