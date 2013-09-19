@@ -450,23 +450,34 @@ $tablet-end:    $desktop-start - 1px;
   
   [class*="block-grid-"] { @include block-grid; }
 
-  @for $i from 1 through $block-grid-elements {
-    .small-block-grid-#{($i)} > li:nth-of-type(#{$i}n+1) { clear: none; }
-  }
-  @for $i from 1 through $block-grid-elements {
-    .large-block-grid-#{($i)} {
-      @include block-grid($i,$block-grid-default-spacing,false);
+  
+  @if $use-for == phone {
+    @for $i from 1 through $block-grid-elements {
+      .xlarge-block-grid-#{($i)} {
+        @include block-grid($i,$block-grid-default-spacing,false);
+      }
     }
   }
 
-    @if $use-for != phone-and-tablet {
-      /* Remove small grid clearing */
-      @for $i from 1 through $block-grid-elements {
-        .small-block-grid-#{($i)} {
-          @include block-grid($i,$block-grid-default-spacing,false);
-        }
-      } 
+  @if $use-for == tablet {
+    @for $i from 1 through $block-grid-elements {
+      .small-block-grid-#{($i)} > li:nth-of-type(#{$i}n+1) { clear: none; }
     }
+    @for $i from 1 through $block-grid-elements {
+      .large-block-grid-#{($i)} {
+        @include block-grid($i,$block-grid-default-spacing,false);
+      }
+    }
+  }
+
+  @if $use-for == general {
+    /* Remove small grid clearing */
+    @for $i from 1 through $block-grid-elements {
+      .small-block-grid-#{($i)} {
+        @include block-grid($i,$block-grid-default-spacing,false);
+      }
+    } 
+  }
 
 }
 

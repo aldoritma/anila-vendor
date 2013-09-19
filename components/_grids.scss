@@ -112,7 +112,7 @@
 
 				@if $use-block-grids {
 					// all base block grid
-					@include base-block-grid(general);
+					@include base-block-grid(tablet);
 				}
 
 			}	
@@ -152,7 +152,7 @@
 				\*------------------------------------*/
 
 				@if $use-block-grids {
-					@include base-block-grid(phone-and-tablet);
+					@include base-block-grid(phone);
 				}
 
 			}
@@ -208,7 +208,7 @@
 					}
 				}
 				@if $use-block-grids {
-					@include base-block-grid(phone-and-tablet);
+					@include base-block-grid(tablet);
 				}
 			}
 
@@ -225,7 +225,7 @@
 					}
 				}
 				@if $use-block-grids {
-					@include base-block-grid(phone-and-tablet);
+					@include base-block-grid(tablet);
 				}
 			}
 
