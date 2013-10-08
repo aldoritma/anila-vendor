@@ -400,6 +400,8 @@ $tablet-end:    $desktop-start - 1px;
     .push#{-$i} { @include grid-column($push:$i, $collapse:null, $float:false); }
     .pull#{-$i} { @include grid-column($pull:$i, $collapse:null, $float:false); }
   }
+  .unpush { left: 0; }
+  .unpull { right: 0; }
 }
 
 
@@ -875,7 +877,7 @@ $tablet-end:    $desktop-start - 1px;
         width: 39%;
         margin-right: 1%;
         &.button-control {
-           width: 20%;
+            width: auto;
             margin-right: 0;
         }
         button {
