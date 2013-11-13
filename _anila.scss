@@ -39,6 +39,13 @@
  
 @import "modular-scale";
 
+/**
+ * customize variables.
+ * I just want to make sure defaults file is clean as it is.
+ * Simply copy-paste and remove the !default state to vars if you want to overide a variable.
+ */
+@import "../custom/vars";
+
 @import "defaults";
 @import "general/mixins";
 @import "general/normalize";
@@ -50,14 +57,6 @@
   ANILA. SI MONYET BIRU YANG NEMPLOK DI NARRADA.
 ================================================
 */
-
-/**
- * customize variables.
- * I just want to make sure defaults file is clean as it is.
- * Simply copy-paste and remove the !default state to vars if you want to overide a variable.
- */
-@import "../custom/vars";
-
 
 /**
  * Base styles; unclassed HTML elements etc.
