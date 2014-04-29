@@ -33,56 +33,23 @@
 /*------------------------------------*\
     $IMPORTS
 \*------------------------------------*/
-/**
- * Generic utility styles etc.
- */
  
-@import "modular-scale";
+@import
+	"modular-scale",
+	"../custom/vars",
+	"defaults",
+	"general/mixins",
+	"general/normalize",
+	"general/reset",
+	"general/debug",
+	"base/main",
+	"base/quotes",
+	"base/type",
+	"base/tables",
+	"base/forms",
+	"components/grids",
+	"components/buttons",
+	"../custom/custom",
+	"general/helper"
+;
 
-/**
- * customize variables.
- * I just want to make sure defaults file is clean as it is.
- * Simply copy-paste and remove the !default state to vars if you want to overide a variable.
- */
-@import "../custom/vars";
-
-@import "defaults";
-@import "general/mixins";
-@import "general/normalize";
-@import "general/reset";
-@import "general/debug";
-
-/*!
-================================================
-  ANILA. SI MONYET BIRU YANG NEMPLOK DI NARRADA.
-================================================
-*/
-
-/**
- * Base styles; unclassed HTML elements etc.
- */
-@import "base/main";
-@import "base/quotes";
-@import "base/type";
-@import "base/tables";
-@import "base/forms";
-
-/**
- * Components and abstractions
- */
-@import "components/grids";
-@import "components/buttons";
-
-/**
- * Place any of your own site styling that sit on top of Anila here.
- * don't put it on style, under the import of anila. helper always on the bottom of CSS. !important rules.
- */
-@import "../custom/custom";
-
-
-
-
-/**
- * Style trumps; helper and brand classes
- */
-@import "general/helper";
